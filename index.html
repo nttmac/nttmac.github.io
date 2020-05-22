@@ -279,7 +279,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/05/21/%E9%93%BE%E8%A1%A8%E2%80%94%E2%80%94%E5%88%A4%E6%96%AD%E6%9C%89%E6%97%A0%E7%8E%AF%E3%80%81%E7%8E%AF%E9%95%BF%E5%BA%A6%E3%80%81%E5%85%A5%E5%8F%A3/" itemprop="url">链表——判断有无环、环长度、入口</a></h1>
+                <a class="post-title-link" href="/2020/05/21/%E9%93%BE%E8%A1%A8%E2%80%94%E2%80%94%E5%88%A4%E6%96%AD%E6%9C%89%E6%97%A0%E7%8E%AF%E3%80%81%E7%8E%AF%E9%95%BF%E5%BA%A6%E3%80%81%E5%85%A5%E5%8F%A3/" itemprop="url">链表——判断有无环、入口</a></h1>
         
 
         <div class="post-meta">
@@ -354,7 +354,7 @@
         
           
             <h2 id="题目来源："><a href="#题目来源：" class="headerlink" title="题目来源："></a>题目来源：</h2><p><a href="https://leetcode-cn.com/problems/linked-list-cycle/" target="_blank" rel="noopener">环形链表</a></p>
-<p><a href="">环形链表2</a></p>
+<p><a href="https://leetcode-cn.com/problems/linked-list-cycle-ii/" target="_blank" rel="noopener">环形链表 II</a></p>
 <h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><h3 id="判断链表是否有环（两种方案）："><a href="#判断链表是否有环（两种方案）：" class="headerlink" title="判断链表是否有环（两种方案）："></a>判断链表是否有环（两种方案）：</h3><h4 id="字典或集合"><a href="#字典或集合" class="headerlink" title="字典或集合"></a>字典或集合</h4><ol>
 <li><p>将结点逐一加入到字典或集合中，若字典或集合中已经存在该结点，则链表有环 </p>
 </li>
@@ -370,6 +370,18 @@
 
 <p>时间复杂度：O(n)</p>
 <p>空间复杂度：O(1)</p>
+<h3 id="链表入环口（两种方案）"><a href="#链表入环口（两种方案）" class="headerlink" title="链表入环口（两种方案）"></a>链表入环口（两种方案）</h3><h4 id="字典或集合-1"><a href="#字典或集合-1" class="headerlink" title="字典或集合"></a>字典或集合</h4><p>同上，在迭代时计数即可</p>
+<h4 id="快慢指针-1"><a href="#快慢指针-1" class="headerlink" title="快慢指针"></a>快慢指针</h4><p>分两个阶段：</p>
+<ul>
+<li>阶段一同上</li>
+<li>阶段二：<ul>
+<li>相遇之后，多设置一个慢指针指向头结点</li>
+<li>同时移动两个慢指针</li>
+<li>当两个慢指针相遇时，即是入口处</li>
+</ul>
+</li>
+</ul>
+<p>具体解释可见：<a href="https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/linked-list-cycle-ii-kuai-man-zhi-zhen-shuang-zhi-/" target="_blank" rel="noopener">双指针法</a></p>
 
           
         
